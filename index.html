@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input form</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <center><h1>EMPLYOEE DETAILS</h1></center>
+        <form name=fom id="rs" onsubmit="return val()" action="#">
+        <center><table class="t1" >
+            <tr>
+                <td><label>First Name : </label></td>
+                <td> <input id="f" class="p" type="text" placeholder="First Name" autofocus> </td>
+            </tr>
+            <tr>
+                    <td><label>Last Name : </label></td>
+                    <td> <input id="l" class="p" type="text" placeholder="Last Name"> </td>
+            </tr>
+            <tr>
+                    <td><label>Gender : </label></td>
+                    <td> <input id="g" type="radio" name="gender" value="male">Male <input type="radio" id="g1" name="gender" value="female">Female</td>
+             </tr>
+             <tr>
+                    <td><label>Marital Status : </label></td>
+                    <td> <input id="m" type="radio" name="Marital" value="Married">Married <input type="radio" id="um" name="Marital" value="Unmarried" onclick="chk()">Unmarried</td>
+             </tr>
+             <tr>
+                    <td><label>Name of Spouse : </label></td>
+                    <td> <input id="s" id="dis" class="p" type="text"  placeholder="" > </td>
+             </tr>
+             <tr>
+                    <td><label>Other Details : </label></td>
+                    <td> <input id="o" class="p" type="text" placeholder=""> </td>
+             </tr>
+             <tr >
+                    <td colspan="2">  <input type="checkbox" id="r"> I accept <a style="color:blue"   href="">Terms and Conditions</a>
+                    </td>
+             </tr>
+             <tr >
+                    <td><center><input type="reset" value="Reset" onclick="ch()"></center></td>
+                    <td><center> <input type="submit" value="Submit"></center> </td>
+             </tr>
+        </table></center>
+        </form>
+    </div>
+    <script>
+           function chk()
+               {  
+                      document.getElementById("dis").disabled = true;
+              }  
+              function ch()
+              {
+                     document.getElementById("rs").reset();
+              }
+              function val()
+              {
+                     if(document.getElementById("f").value=='')
+                     {
+                            alert("Please Enter first name ");
+                            
+                     }else if(document.getElementById("l").value=='')
+                     {
+                            alert("Please Enter last name ");
+                     }
+                    else if((document.getElementById("g").checked=='')&&(document.getElementById("g1").checked==''))
+                    {
+                     alert("select male or female ");  
+                     return false; 
+
+                     // return true;  
+                    }
+                    else if((document.getElementById("m").checked=='')&&(document.getElementById("um").checked==''))
+                    {
+                     alert("Select Martial status ");     
+                      return false;
+                     // return true;
+                    }
+                     
+                     else if(document.getElementById("s").value=='')
+                     {
+                            alert("Enter your Spouse Name ");
+                     }
+                     else if(document.getElementById("o").value=='')
+                     {
+                            alert("Enter other details ");
+                     }
+                     else if(document.getElementById("r").checked=='')
+                     {
+                            alert("Read Terms and conditions ");
+                     }
+              }
+         
+       </script>
+    
+</body>
+</html>

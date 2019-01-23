@@ -1,0 +1,29 @@
+table,tr,td
+{
+    border: 1px solid white;
+    font-size: 30px;
+    padding: 5px;
+}
+.t1
+{
+    margin: 10px;
+}
+body
+{
+    background: url(emp.jpg) no-repeat center center fixed;
+    background-size: 100%;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+}
+h1
+{
+    margin-top: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+input[type="text"] {
+    font-family: monospace;
+    font-size: 25px;
+    color:black;
+  }
