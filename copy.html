@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>copyon refresh</title>
+    <style>
+           
+            .container
+            {
+                margin: 50px;
+                display: inline-block;
+                background-color: aqua;
+                border:3px solid grey;
+            }
+            .tt
+            {
+                margin: 50px;
+            }
+            #b
+            {
+                margin: 10px;
+            }
+              
+            </style>
+</head>
+<body>
+        <div class="container"> 
+                <!-- <div class="cont1"> -->
+                        <textarea class="tt" id="cc" rows="20" cols="60">
+                               
+                        </textarea>
+                    
+                                
+                <!-- </div> -->
+                <!-- <div class="cont2"> -->
+                        <textarea class="tt" id="ct" rows="20" cols="60">
+                               
+                         </textarea>
+                         <br>
+                   
+                <!-- </div> -->
+              <center>  <button id="b" onclick="copy()"> REFRESH </button></center>
+            </div>
+            <script>
+                function    copy()
+                {
+                    var a=document.getElementById("cc").value;
+
+                    document.getElementById("ct").value =a;
+                    document.getElementById("cc").value='';
+                }
+
+                </script>
+    
+</body>
+</html>

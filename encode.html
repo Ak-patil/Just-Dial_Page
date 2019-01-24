@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>encode</title>
+    <style>
+           
+            .container
+            {
+                margin: 50px;
+                display: inline-block;
+                background-color: aqua;
+                border:3px solid grey;
+            }
+            .tt
+            {
+                margin: 50px;
+            }
+            #b
+            {
+                margin: 10px;
+            }
+              
+    </style>
+</head>
+<body>
+        <div class="container"> 
+                <!-- <div class="cont1"> -->
+                        <textarea class="tt" id="cc" rows="20" cols="60">
+                               
+                        </textarea>
+                    
+                                
+                <!-- </div> -->
+                <!-- <div class="cont2"> -->
+                        <textarea class="tt" id="ct" rows="20" cols="60">
+                               
+                         </textarea>
+                         <br>
+                   
+                <!-- </div> -->
+              <center>  <button id="b" onclick="encod()"> ENCODE </button></center>
+              <center>  <button id="bc" onclick="decod()"> DECODE </button></center>
+            </div>
+
+
+
+
+
+        <script>
+        function encod()
+        {
+            var encodedString = document.getElementById("cc").value;
+            var enc=window.btoa(encodedString);
+            document.getElementById("cc").innerHTML=enc;
+        }
+        
+        function decod()
+        {
+        var decodedString = document.getElementById("ct").value;
+        var dec=window.atob(encodedString);
+        document.getElementById("ct").innerHTML=dec;
+        }
+       
+    </script>
+</body>
+</html>
