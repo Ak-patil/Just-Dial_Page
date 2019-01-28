@@ -27,11 +27,11 @@
              </tr>
              <tr>
                     <td><label>Marital Status : </label></td>
-                    <td> <input id="m" type="radio" name="Marital" value="Married">Married <input type="radio" id="um" name="Marital" value="Unmarried" onclick="chk()">Unmarried</td>
+                    <td> <input id="m" type="radio" name="Marital" value="Married" onclick="chk1()">Married <input type="radio" id="um" name="Marital" value="Unmarried" onclick="chk()" >Unmarried</td>
              </tr>
              <tr>
                     <td><label>Name of Spouse : </label></td>
-                    <td> <input id="s" id="dis" class="p" type="text"  placeholder="" > </td>
+                    <td> <input  id="dis" class="p" type="text"  placeholder="" > </td>
              </tr>
              <tr>
                     <td><label>Other Details : </label></td>
@@ -49,10 +49,7 @@
         </form>
     </div>
     <script>
-           function chk()
-               {  
-                      document.getElementById("dis").disabled = true;
-              }  
+           
               function ch()
               {
                      document.getElementById("rs").reset();
@@ -62,39 +59,65 @@
                      if(document.getElementById("f").value=='')
                      {
                             alert("Please Enter first name ");
+                            return false; 
                             
-                     }else if(document.getElementById("l").value=='')
+                     }if(document.getElementById("l").value=='')
                      {
                             alert("Please Enter last name ");
+                            return false; 
                      }
-                    else if((document.getElementById("g").checked=='')&&(document.getElementById("g1").checked==''))
+                    if((document.getElementById("g").checked=='')&&(document.getElementById("g1").checked==''))
                     {
-                     alert("select male or female ");  
-                     return false; 
-
+                           {
+                            alert("select male or female ");  
+                              return false; 
+                           }
                       return true;  
                     }
-                    else if((document.getElementById("m").checked=='')&&(document.getElementById("um").checked==''))
+                     if((document.getElementById("m").checked=='')&&(document.getElementById("um").checked==''))
                     {
-                     alert("Select Martial status ");     
-                      return false;
-                   return true;
+                             
+                           {
+                            alert("Select Martial status ");     
+                             return false;
+                           }
+                           
+                      return true;
                     }
-                     
-                     else if(document.getElementById("s").value=='')
-                     {
-                            alert("Enter your Spouse Name ");
-                     }
-                     else if(document.getElementById("o").value=='')
+                    if(document.getElementById("dis").value=='')
+                      {
+                             alert("Enter your Spouse Name ");
+                             return false; 
+                     } 
+                    
+                      if(document.getElementById("o").value=='')
                      {
                             alert("Enter other details ");
+                            return false; 
                      }
-                     else if(document.getElementById("r").checked=='')
+                      if(document.getElementById("r").checked=='')
                      {
                             alert("Read Terms and conditions ");
+                            return false; 
                      }else
-                     alert("tahnk you ");
+                     alert("thank you ");
               }
+              function chk()
+                    {
+                    
+                            //  document.getElementById("dis").style.visibility = 'hidden';
+                            document.getElementById("dis").disable = true;
+                     
+                      
+                    }
+                    function chk1()
+                    {
+                     
+                            //  document.getElementById("dis").style.visibility= 'visible';
+                            document.getElementById("dis").disable= false;
+                      
+                      
+                    }
        </script>
 </body>
 </html>

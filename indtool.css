@@ -1,36 +1,45 @@
 
  body
 {
-    background: url('lbird.jpg') no-repeat center center fixed;
+    /* background: url('lbird.jpg') no-repeat center center fixed; */
     -webkit-background-size:cover;
     -moz-background-size:cover;
-     -o-background-size:cover;
-     background-size: cover;
-}    */
+    -o-background-size:cover;
+    background-size: cover;
+}    
 
-.tooltip
+ .tooltip
  {
-position: relative;
-display: inline-block;
-border-bottom: 1px dotted black;
+    position: relative;
+    display: block;
+    
+}
+/*
+.tooltip .tooltiptext
+ {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(248, 244, 244);
+    color: rgb(7, 7, 7);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
 }
 
-.tooltip .tooltiptext {
-visibility: hidden;
-width: 120px;
-background-color: rgb(248, 244, 244);
-color: rgb(7, 7, 7);
-text-align: center;
-border-radius: 6px;
-padding: 5px 0;
-position: absolute;
-z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-visibility: visible;
+.tooltip:hover .tooltiptext
+ {
+    visibility: visible;
 }
 .tooltip
 {
+    
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
 
+/* } */ 
+img{
+    height: 700px;
 }

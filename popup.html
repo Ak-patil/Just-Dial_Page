@@ -5,15 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>popup</title>
+    <style>
+      body
+      {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: aqua;
+      }
+      button
+      {
+        padding: 0.25rem 0.5rem;
+        border:3px solid #fefefe;
+        border-radius: 7px;
+        color:red;
+        background:rgba(0,0,0,0.6);
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        cursor: pointer; 
+        outline:none;
+      }
+      button:hover
+      {
+        background: rgba(0,0,0)
+      }
+      #bt2
+      {
+        margin-left: 50px;
+      }
+      </style>
 </head>
 <body>
-        <button onclick="openWin()">Open "myWindow"</button>
-        <button onclick="closeWin()">Close "myWindow"</button>
-        
+        <button id="bt1" onclick="openWin()">Open MyWindow</button>
+        <button id="bt2" onclick="closeWin()">Close MyWindow</button>
         <script>
         var myWindow;
         
-        function openWin() {
+        function openWin() 
+        {
           myWindow = window.open("", "myWindow", "width=200,height=400");
           myWindow.document.write("<p>This is 'myWindow'</p>");
         }
