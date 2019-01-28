@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>popup</title>
     <style>
       body
       {
           min-height: 100vh;
-          display: flex;
+      
           justify-content: center;
           align-items: center;
           background-color: aqua;
@@ -25,6 +28,7 @@
         text-transform: capitalize;
         cursor: pointer; 
         outline:none;
+        
       }
       button:hover
       {
@@ -37,6 +41,23 @@
       </style>
 </head>
 <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Assignment</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Input form</a></li>
+            <li><a href="copy.html">Copy Paragraph</a></li>
+            <li><a href="dragdrop.html">Drag&Drop</a></li>
+            <li><a href="encode.html">Encode</a></li>
+            <li><a href="indexdiv.html">Div</a></li>
+            <li><a href="index1.html">Justdial</a></li>
+            <li><a href="popup.html">Popup</a></li>
+            <li><a href="indtool.html">Tool Tip</a></li>
+          </ul>
+        </div>
+      </nav>
         <button id="bt1" onclick="openWin()">Open MyWindow</button>
         <button id="bt2" onclick="closeWin()">Close MyWindow</button>
         <script>

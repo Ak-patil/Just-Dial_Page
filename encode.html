@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>encode</title>
     <style>
            
             .container
             {
-                margin: 50px;
+                margin: 10px;
+                margin-left: 80px;
                 display: inline-block;
                 background-color: aqua;
                 border:3px solid grey;
@@ -26,11 +30,28 @@
     </style>
 </head>
 <body>
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Assignment</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Input form</a></li>
+                    <li><a href="copy.html">Copy Paragraph</a></li>
+                    <li><a href="dragdrop.html">Drag&Drop</a></li>
+                    <li><a href="encode.html">Encode</a></li>
+                    <li><a href="indexdiv.html">Div</a></li>
+                    <li><a href="index1.html">Justdial</a></li>
+                    <li><a href="popup.html">Popup</a></li>
+                    <li><a href="indtool.html">Tool Tip</a></li>
+                  </ul>
+                </div>
+              </nav>
         <div class="container"> 
                 <center> <h1> Encode and Decode</h1> </center>
-            <textarea class="tt" id="cc" rows="20" cols="60">    
+            <textarea class="tt" id="cc" rows="20" cols="55">    
             </textarea>
-            <textarea class="tt" id="ct" rows="20" cols="60">
+            <textarea class="tt" id="ct" rows="20" cols="55">
             </textarea>
             <br>
             <center>  <button id="b" onclick="encod()"> ENCODE </button></center>
