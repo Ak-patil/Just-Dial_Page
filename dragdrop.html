@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>drag</title>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="drag.css">
+    </head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="column1"> 
+           <p class="st ">Name </p>
+            <div id="td1"  ondrop="drop1(event)" ondragover="allow1(event)"></div>
+            <p class="st ">Place </p>
+            <div id="td2" ondrop="drop2(event)" ondragover="allow2(event)"></div>
+            <p class="st ">Thing</p>
+            <div id="td3" ondrop="drop3(event)" ondragover="allow3(event)"></div>
+            <p class="st ">Animal</p>
+            <div id="td4" ondrop="drop4(event)" ondragover="allow4(event)"></div>
+        </div>
+        <div class="column2" >
+             
+            <div class="is"><center><img id="drg1" src="thing.jpg" draggable="true" ondragstart="drag1(event)" ></center></div>
+    
+            <div class="is"> <center> <img id="drg2"  src="index.jpg" draggable="true" ondragstart="drag2(event)" ></center></div>
+
+            <div class="is"><center><img id="drg3"  src="index.png" draggable="true" ondragstart="drag3(event)" ></center></div>
+
+             <div class="is"><center><img id="drg4" src="download.jpg" draggable="true" ondragstart="drag4(event)" ></center></div>
+    
+        </div>
+    </div>
+</div>
+
+<script>
+        function allow1(e) {
+  e.preventDefault();
+}
+    function allow2(e) {
+  e.preventDefault();
+}
+    
+    function allow3(e) {
+  e.preventDefault();
+}
+    function allow4(e) {
+  e.preventDefault();
+}
+
+function drag1(e) {
+  e.dataTransfer.setData("drag1", e.target.id);
+    
+}
+    function drag2(e) {
+  e.dataTransfer.setData("drag2", e.target.id);
+    
+}
+    function drag3(e) {
+  e.dataTransfer.setData("drag3", e.target.id);
+    
+}
+    function drag4(e) {
+  e.dataTransfer.setData("drag4", e.target.id);
+    
+}
+
+function drop1(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("drag1");
+  e.target.appendChild(document.getElementById(data));
+}
+    function drop2(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("drag2");
+  e.target.appendChild(document.getElementById(data));
+}
+function drop3(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("drag3");
+  e.target.appendChild(document.getElementById(data));
+}
+function drop4(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("drag4");
+  e.target.appendChild(document.getElementById(data));
+}
+</script>
+
+</body>
+</html>

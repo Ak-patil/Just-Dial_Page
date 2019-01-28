@@ -1,0 +1,49 @@
+
+.row
+{
+    display: block;
+    
+}
+.column1
+{
+    display: inline-table;
+    border: 4px solid black;
+    height: 800px;
+    width: 50%;
+    background-color: aqua;
+    float: left;
+}
+.column2
+{
+    display: inline-table;
+    border: 4px solid black;
+    height: 800px;
+    background-color:aqua;
+    width: 45%;
+    float: right;
+    
+}
+
+#td1,#td2,#td3,#td4
+{
+    margin-left: 25%;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }
+  .st
+  {
+      text-align: center;
+  }
+  .is
+  {
+      margin: 90px;
+      
+      position: relative;
+  }
+  .is:last-child
+  {
+      margin-bottom: 0px;
+  }
+  

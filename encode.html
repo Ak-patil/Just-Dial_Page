@@ -16,7 +16,7 @@
             }
             .tt
             {
-                margin: 50px;
+                margin: 30px;
             }
             #b
             {
@@ -27,41 +27,30 @@
 </head>
 <body>
         <div class="container"> 
-                <!-- <div class="cont1"> -->
-                        <textarea class="tt" id="cc" rows="20" cols="60">
-                               
-                        </textarea>
-                    
-                                
-                <!-- </div> -->
-                <!-- <div class="cont2"> -->
-                        <textarea class="tt" id="ct" rows="20" cols="60">
-                               
-                         </textarea>
-                         <br>
-                   
-                <!-- </div> -->
-              <center>  <button id="b" onclick="encod()"> ENCODE </button></center>
-              <center>  <button id="bc" onclick="decod()"> DECODE </button></center>
-            </div>
-
-
-
-
-
-        <script>
+                <center> <h1> Encode and Decode</h1> </center>
+            <textarea class="tt" id="cc" rows="20" cols="60">    
+            </textarea>
+            <textarea class="tt" id="ct" rows="20" cols="60">
+            </textarea>
+            <br>
+            <center>  <button id="b" onclick="encod()"> ENCODE </button></center>
+            <br>
+            <center>  <button id="bc" onclick="decod()"> DECODE </button></center>
+            <br>
+        </div>
+    <script>
         function encod()
         {
             var encodedString = document.getElementById("cc").value;
             var enc=window.btoa(encodedString);
-            document.getElementById("cc").innerHTML=enc;
+            document.getElementById("ct").innerHTML=enc;
         }
         
         function decod()
         {
-        var decodedString = document.getElementById("ct").value;
-        var dec=window.atob(encodedString);
-        document.getElementById("ct").innerHTML=dec;
+            var decodedString = document.getElementById("cc").value;
+            var dec=window.atob(encodedString);
+            document.getElementById("ct").innerHTML=dec;
         }
        
     </script>
